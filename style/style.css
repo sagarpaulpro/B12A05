@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+section {
+    margin: 48px 62px 86px 62px;
+}
+.buttons button {
+    margin: 0 auto;
+    padding: 5px 28px;
+}
