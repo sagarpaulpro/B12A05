@@ -5,18 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Service</title>
     <link rel="stylesheet" href="./style/style.css">
-    <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <nav class="container mx-auto">
-            <div class="right-side flex items-center">
-                <img src="./assets/logo.png" alt="Bangladesh">
-                <h1 class="font-bold text-5xl">Emergency <br /> Service</h1>
+        <nav class="container mx-auto flex justify-between items-center py-[20px]">
+            <div class="right-side flex items-center gap-4">
+                <img src="./assets/logo.png" class="w-[50px] h-[50px]" alt="Bangladesh">
+                <h1 class="font-bold text-xl text-green-800">Emergency <br /> Service</h1>
             </div>
-            
+            <div class="left-side">
+                <div class="flex items-center gap-4">
+                    <!-- Heart Counter -->
+                    <div class="flex items-center gap-2 bg-green-50 px-6 py-3 rounded-full">
+                        <span class="font-bold">0</span>
+                        <span><img src="./assets/heart.png" class="w-[30px] h-[30px]" alt="love" ></span>
+                    </div>
+
+                    <!-- Star Counter -->
+                    <div class="flex items-center gap-2 bg-green-50 px-6 py-3 rounded-full">
+                        <span class="font-bold" id="coinCounter">100</span>
+                        <span><img src="./assets/coin.png" class="w-[30px] h-[30px]" alt="coin" ></span>
+                    </div>
+
+                    <!-- Copy Button -->
+                    <button class="bg-green-600 text-white font-semibold px-8 py-3 rounded-full">
+                    <span id="copyCounter">0  </span> Copy
+                    </button>
+                </div>
+
+            </div>
         </nav>
         <section class="bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-center mx-auto px-[60px] py-[21px]">
             <img src="./assets/logo-dark.png" class="mx-auto w-[90px] h-[90px]" alt="Republic of Bangladesh">
@@ -25,8 +44,8 @@
         </section>
     </header>
     <main class="container mx-auto">
-        <section class="flex justify-center gap-3">
-            <div class="cards grid grid-cols-3 gap-3">
+        <section class="flex justify-between">
+            <div class="cards grid grid-cols-3 gap-5">
                 <div class="card p-[32px] rounded-[12px] shadow-lg">
                     <div class="card-icons flex justify-between items-center">
                         <img src="./assets/emergency.png" class="w-[32px] h-[32px]" alt="Emergency">
@@ -241,15 +260,18 @@
                     </div>
                 </div>
             </div>
-            <div class="shadow-lg rounded-[12px] py-[35px]">
-                <div class="flex justify-between gap-3 mx-4">
+            <div class="shadow-lg rounded-[12px] py-[35px] w-[300px]">
+                <div class="flex justify-between gap-3 mx-4 my-4">
                     <div class="flex items-center">
                         <i class="fa-regular fa-clock mx-1"></i>
                         <span class="text-sm"> Call History </span>
                     </div>
                     <button class="rounded-[8px] px-[10px] py-[5px] bg-green-500 text-white">Clear</button>
                 </div>
+                <div id="cardContainer"></div>
             </div>
+        </section>
     </main>
+    <script src="./js/main.js"></script>
 </body>
 </html>
