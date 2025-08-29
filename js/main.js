@@ -39,6 +39,7 @@ for(let i=0;i<document.getElementsByTagName('button').length;i++){
         });
     }
 }
+
 for(let i=0;i<document.getElementsByClassName('fa-regular fa-heart').length;i++){
     document.getElementsByClassName('fa-regular fa-heart')[i].addEventListener('click',function(){
         document.getElementById('loveCounter').innerText = parseInt(document.getElementById('loveCounter').innerText) + 1;
