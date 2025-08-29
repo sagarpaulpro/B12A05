@@ -1,4 +1,4 @@
-for(i=0;i<document.getElementsByTagName('button').length;i++){
+for(let i=0;i<document.getElementsByTagName('button').length;i++){
     if(document.getElementsByTagName('button')[i].innerText === 'Copy'){
         document.getElementsByTagName('button')[i].addEventListener('click',function(){
             document.getElementById('copyCounter').innerText = parseInt(document.getElementById('copyCounter').innerText) + 1;
@@ -38,4 +38,9 @@ for(i=0;i<document.getElementsByTagName('button').length;i++){
             document.getElementById('cardContainer').innerHTML = '';
         });
     }
+}
+for(let i=0;i<document.getElementsByClassName('fa-regular fa-heart').length;i++){
+    document.getElementsByClassName('fa-regular fa-heart')[i].addEventListener('click',function(){
+        document.getElementById('loveCounter').innerText = parseInt(document.getElementById('loveCounter').innerText) + 1;
+    });
 }
